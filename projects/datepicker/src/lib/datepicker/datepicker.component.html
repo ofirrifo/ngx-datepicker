@@ -1,21 +1,14 @@
 <div>
-  <div class="header">
-    <button class="link-btn" (click)="showToday()">Today</button>
+  <ngx-days-header
+    [currentViewDate]="currentViewDate"
 
-    <div class="month">{{currentViewDate.year}} / {{currentViewDate.month}}</div>
-    <div class="month-btn" (click)="prevMonth()"> <</div>
-    <div class="month-btn" (click)="nextMonth()"> ></div>
-  </div>
+    (showToday)="showToday()"
+    (nextMonth)="nextMonth()"
+    (prevMonth)="prevMonth()">
+  </ngx-days-header>
 
-  <div class="week-days">
-    <div class="day-name">S</div>
-    <div class="day-name">M</div>
-    <div class="day-name">T</div>
-    <div class="day-name">W</div>
-    <div class="day-name">T</div>
-    <div class="day-name">F</div>
-    <div class="day-name">S</div>
-  </div>
+  <ngx-week-days-header>
+  </ngx-week-days-header>
 
   <ngx-days
     [days]="days"
