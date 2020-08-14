@@ -1,0 +1,34 @@
+<div>
+  <div class="header">
+    <button class="link-btn" (click)="showToday()">Today</button>
+
+    <div class="month">{{currentViewDate.year}} / {{currentViewDate.month}}</div>
+    <div class="month-btn" (click)="prevMonth()"> <</div>
+    <div class="month-btn" (click)="nextMonth()"> ></div>
+  </div>
+
+  <div class="week-days">
+    <div class="day-name">S</div>
+    <div class="day-name">M</div>
+    <div class="day-name">T</div>
+    <div class="day-name">W</div>
+    <div class="day-name">T</div>
+    <div class="day-name">F</div>
+    <div class="day-name">S</div>
+  </div>
+
+  <ngx-days
+    [days]="days"
+
+    (selected)="updateSelected($event)"
+  ></ngx-days>
+
+  <div class="footer">
+    <button class="link-btn" (click)="showSelected()" [disabled]="!selectedDate">Selected</button>
+    <button class="link-btn" (click)="clear()" [disabled]="!selectedDate">Clear</button>
+    <button class="link-btn" (click)="apply()" [disabled]="!selectedDate">Apply</button>
+    <button class="link-btn" (click)="cancel()" [disabled]="!selectedDate">Cancel</button>
+  </div>
+</div>
+
+
