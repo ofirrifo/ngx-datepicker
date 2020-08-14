@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/ofirrifo/ngx-datepicker/blob/master/screen-shot.png)
 
 <p align="center">
-  <img width="400" alt="placeholder" src="https://github.com/LironHazan/ng-micro-interact/blob/master/captured.gif" />
+  <img width="400" alt="placeholder" src="https://github.com/ofirrifo/ngx-datepicker/blob/master/screen-shot.png" />
 </p>
 
 Description of what this libriray do and maybe why it is sooo awesome and everyone should be 
