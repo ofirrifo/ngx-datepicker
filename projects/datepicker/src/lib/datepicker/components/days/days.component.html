@@ -1,9 +1,8 @@
 <div
   *ngFor="let day of days; trackBy: trackByFn"
   class="day"
-  (click)="selected.emit({event: $event, data: day})"
-  [attr.data-date-in-ms]="day?.dateInMs">
-  <div class="day-value {{day?.class}}">
+  (click)="selected.emit({event: $event, data: day})">
+  <div class="day-value {{day?.class}}" [attr.data-date-in-ms]="day?.dateInMs">
     {{day?.value}}
   </div>
 </div>

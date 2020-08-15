@@ -14,10 +14,16 @@ export class DaysComponent implements OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     setTimeout(() => {
-      Array.from(document.querySelectorAll('.day')).forEach((element: HTMLElement) => {
+      Array.from(document.querySelectorAll('.day-value')).forEach((element: HTMLElement) => {
         const dateInMs = parseInt(element.getAttribute('data-date-in-ms'));
-        if (dateInMs >= 1596661200000 && dateInMs <= 1596920400000) {
-          element.classList.add('mystyle');
+        if (dateInMs >= 1596661200000 && dateInMs <= 1597006800000) {
+          element.classList.add('range-day-marker');
+          if (dateInMs === 1596661200000) {
+            element.classList.add('range-day-marker-start');
+          }
+          if (dateInMs === 1597006800000) {
+            element.classList.add('range-day-marker-end');
+          }
         }
       });
     });

@@ -1,3 +1,6 @@
+$day-width-an-height: 40px;
+$day-value-width-an-height: $day-width-an-height - 4px;
+
 :host {
   display: grid;
   width: 280px;
@@ -10,17 +13,40 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: $day-width-an-height;
+    height: $day-width-an-height;
 
     .day-value {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 36px;
-      height: 36px;
+      width: $day-value-width-an-height;
+      height: $day-value-width-an-height;
       color: var(--n-text-color);
       font-size: 13px;
+      position: relative;
+
+      &.range-day-marker::before {
+        content: '';
+        background: rgba(63, 81, 181, .2);
+        width: $day-width-an-height;
+        height: $day-value-width-an-height;
+        position: absolute;
+      }
+
+      &.range-day-marker-start::before {
+        border-top-left-radius: 50%;
+        border-bottom-left-radius: 50%;
+        width: $day-width-an-height - 2px;
+        left: 0;
+      }
+
+      &.range-day-marker-end::before {
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 50%;
+        width: $day-width-an-height - 2px;
+        right: 0;
+      }
 
       &:hover:not(.prev-month-day):not(.next-mont-day):not(.selected) {
         cursor: pointer;
@@ -55,6 +81,5 @@
   }
 }
 
-.mystyle{
-   background: rgba(63,81,181,.2);;
-}
+
+
