@@ -1,8 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { getDateAsObject, getDateInMs, getNowDate } from './date.utils';
 import { createCalendarDays } from './utils/calendar-days.utils';
 import { CalendarDay } from './models/calendar-day.interface';
-import { OutputEventInterface } from './models/output-event.interface';
 
 @Component({
   selector: 'ngx-datepicker',
@@ -13,7 +12,7 @@ export class DatepickerComponent implements OnInit {
   days: CalendarDay[] = [];
   currentViewDate = getNowDate();
   selectedDate;
-  hidePrevAndNextDays = false;
+  hidePrevAndNextDays = true;
   readonly today = getDateInMs(this.currentViewDate.year, this.currentViewDate.month, this.currentViewDate.day);
 
   ngOnInit(): void {
@@ -75,4 +74,6 @@ export class DatepickerComponent implements OnInit {
   createDays(year: number, month: number): void {
     this.days = createCalendarDays(year, month, this.hidePrevAndNextDays, this.selectedDate);
   }
+
+  hover(): void {}
 }
