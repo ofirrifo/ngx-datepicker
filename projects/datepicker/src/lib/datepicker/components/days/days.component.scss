@@ -30,8 +30,8 @@ $day-value-width-an-height: $day-width-an-height - 4px;
         content: '';
         border-top: 1px dashed rgba(0,0,0,.24);
         border-bottom: 1px dashed  rgba(0,0,0,.24);
-        background: rgba(63, 81, 181, .2);
-        //width: $day-width-an-height;
+        //background: rgba(63, 81, 181, .2);
+        width: $day-width-an-height;
         height: $day-value-width-an-height;
         position: absolute;
       }
