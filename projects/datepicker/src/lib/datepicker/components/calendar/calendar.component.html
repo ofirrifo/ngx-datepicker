@@ -1,0 +1,21 @@
+<div>
+  <ngx-days-header
+    [currentViewDate]="currentViewDate"
+
+    (showToday)="showToday()"
+    (nextMonth)="nextMonth()"
+    (prevMonth)="prevMonth()"
+  ></ngx-days-header>
+
+  <ngx-week-days-header>
+  </ngx-week-days-header>
+
+  <ngx-days
+    [days]="days"
+
+    (selected)="updateSelected($event)"
+  ></ngx-days>
+
+  <ngx-calendar-footer>
+  </ngx-calendar-footer>
+</div>
