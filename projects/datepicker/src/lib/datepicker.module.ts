@@ -3,7 +3,7 @@ import { DatepickerComponent } from './datepicker/datepicker/datepicker.componen
 import { CommonModule } from '@angular/common';
 import { CalendarDaysComponent } from './datepicker/calendar-components/calendar-days/calendar-days.component';
 import { WeekDaysHeaderComponent } from './datepicker/calendar-components/week-days-header/week-days-header.component';
-import { DaysHeaderComponent } from './datepicker/calendar-components/days-header/days-header.component';
+import { CalendarHeaderComponent } from './datepicker/calendar-components/calendar-header/calendar-header.component';
 import { CalendarFooterComponent } from './datepicker/calendar-components/calendar-footer/calendar-footer.component';
 import { CalendarComponent } from './datepicker/calendar-components/calendar/calendar.component';
 
@@ -13,7 +13,7 @@ import { CalendarComponent } from './datepicker/calendar-components/calendar/cal
     DatepickerComponent,
     CalendarDaysComponent,
     WeekDaysHeaderComponent,
-    DaysHeaderComponent,
+    CalendarHeaderComponent,
     CalendarFooterComponent,
     CalendarComponent,
   ],
