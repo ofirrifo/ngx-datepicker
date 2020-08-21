@@ -26,7 +26,7 @@ $day-value-width-an-height: $day-width-an-height - 4px;
       justify-content: center;
       width: $day-value-width-an-height;
       height: $day-value-width-an-height;
-      color: var(--n-text-color);
+      color: var(--dpl-n100-color);
       font-size: 13px;
       position: relative;
 
@@ -56,28 +56,28 @@ $day-value-width-an-height: $day-width-an-height - 4px;
 
       &:hover:not(.prev-month-day):not(.next-mont-day):not(.selected) {
         cursor: pointer;
-        background-color: var(--hover-day-value-color);
+        background-color: var(--dpl-n1-color);
         border-radius: 50%;
       }
 
       &.selected {
-        background-color: var(--selected-day-color);
+        background-color: var(--dpl-b-100-color);
         color: white;
         border-radius: 50%;
       }
 
       &.today {
-        border: 1px solid var(--today-mark-color);
+        border: 1px solid var(--dpl-n40-color);
         border-radius: 50%;
 
         &.selected {
-          box-shadow: inset 0 0 0 1px var(--white-color);
-          border: 1px solid var(--selected-day-color);
+          box-shadow: inset 0 0 0 1px var(--dpl-n0-color);
+          border: 1px solid var(--dpl-b-100-color);
         }
       }
 
       &.prev-month-day, &.next-mont-day {
-        color: var(--n-text-color);
+        color: var(--dpl-n100-color);
       }
 
       &.hide-day {

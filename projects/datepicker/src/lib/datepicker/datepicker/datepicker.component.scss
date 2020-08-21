@@ -1,9 +1,2 @@
-:host {
-  --white-color: #FFF;
-  --selected-day-color: #3F51B5;
-  --n-text-color: rgba(0, 0, 0, 0.87);
-  --today-mark-color: rgba(0, 0, 0, .38);
-  --hover-day-value-color: rgba(0, 0, 0, .04);
-}
-
+@use '../../common/styles/color-palette';
 

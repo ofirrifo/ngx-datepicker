@@ -17,7 +17,7 @@
       justify-content: center;
 
       &:hover {
-        background-color: rgba(0, 0, 0, .04);
+        background-color: var(--dpl-n1-color);
         cursor: pointer;
         border-radius: 50%;
       }

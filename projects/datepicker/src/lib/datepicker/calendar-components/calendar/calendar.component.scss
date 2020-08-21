@@ -12,7 +12,7 @@
 
   .link-btn {
     all: unset;
-    color: rgba(0, 0, 0, 0.87);
+    color: var(--dpl-n90-color);
     font-size: 14px;
     font-weight: 500;
     height: 30px;
@@ -24,7 +24,7 @@
 
     &:hover {
       cursor: pointer;
-      background-color: rgba(0, 0, 0, .04);
+      background-color: var(--dpl-n1-color);
     }
   }
 }
