@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { getDateAsObject, getDateInMs, getNowDate } from './date.utils';
+import { getDate, getDateInMs, getNowDate } from './date.utils';
 import { createCalendarDays } from './utils/calendar-days.utils';
 import { CalendarDay } from './models/calendar-day.interface';
 
@@ -22,7 +22,7 @@ export class DatepickerComponent implements OnInit {
   updateSelected({ event, data: day }: { event: MouseEvent; data: CalendarDay }): void {
     this.selectedDate = {
       dateInMs: day.dateInMs,
-      ...getDateAsObject(new Date(day.dateInMs)),
+      ...getDate(new Date(day.dateInMs)),
     };
     this.createDays(2020, this.currentViewDate.month);
   }

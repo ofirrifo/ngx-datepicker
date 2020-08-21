@@ -7,7 +7,7 @@ export function getDaysInMonth(year: number, month: number): number {
 export function getNowDate(): IDate {
   const now = new Date();
 
-  return getDateAsObject(now);
+  return getDate(now);
 }
 
 export function getMonth(now: Date): number {
@@ -22,7 +22,7 @@ export function getDateInMs(year: number, month: number, day: number): number {
   return new Date(year, month - 1, day).getTime();
 }
 
-export function getDateAsObject(date: Date): IDate {
+export function getDate(date: Date): IDate {
   return {
     year: date.getFullYear(),
     month: getMonth(date),
