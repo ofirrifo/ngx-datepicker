@@ -32,8 +32,8 @@ $day-value-width-an-height: $day-width-an-height - 4px;
 
       &.range-day-marker::before {
         content: '';
-        border-top: 1px dashed rgba(0,0,0,.24);
-        border-bottom: 1px dashed  rgba(0,0,0,.24);
+        border-top: 1px dashed var(--dpl-n24-color);
+        border-bottom: 1px dashed  var(--dpl-n24-color);
         //background: rgba(63, 81, 181, .2);
         width: $day-width-an-height;
         height: $day-value-width-an-height;
