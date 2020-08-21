@@ -16,12 +16,8 @@
     (selected)="updateSelected($event)"
   ></ngx-days>
 
-  <div class="footer">
-    <button class="link-btn" (click)="showSelected()" [disabled]="!selectedDate">Selected</button>
-    <button class="link-btn" (click)="clear()" [disabled]="!selectedDate">Clear</button>
-    <button class="link-btn" (click)="apply()" [disabled]="!selectedDate">Apply</button>
-    <button class="link-btn" (click)="cancel()" [disabled]="!selectedDate">Cancel</button>
-  </div>
+  <ngx-calendar-footer>
+  </ngx-calendar-footer>
 </div>
 
 

@@ -4,10 +4,11 @@ import { CommonModule } from '@angular/common';
 import { DaysComponent } from './datepicker/components/days/days.component';
 import { WeekDaysHeaderComponent } from './datepicker/components/week-days-header/week-days-header.component';
 import { DaysHeaderComponent } from './datepicker/components/days-header/days-header.component';
+import { CalendarFooterComponent } from './datepicker/components/calendar-footer/calendar-footer.component';
 
 @NgModule({
   imports: [CommonModule],
-  declarations: [DatepickerComponent, DaysComponent, WeekDaysHeaderComponent, DaysHeaderComponent],
+  declarations: [DatepickerComponent, DaysComponent, WeekDaysHeaderComponent, DaysHeaderComponent, CalendarFooterComponent],
   exports: [DatepickerComponent],
 })
 export class DatepickerModule {}

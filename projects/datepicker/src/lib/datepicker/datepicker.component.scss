@@ -6,9 +6,7 @@
   --hover-day-value-color: rgba(0, 0, 0, .04);
 }
 
-
 :host {
-
   display: flex;
   box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
   width: 300px;
@@ -17,11 +15,6 @@
   * {
     user-select: none;
     font-family: Roboto, "Helvetica Neue", sans-serif;
-  }
-
-  .footer {
-    height: 40px;
-    padding: 10px;
   }
 
   .link-btn {
