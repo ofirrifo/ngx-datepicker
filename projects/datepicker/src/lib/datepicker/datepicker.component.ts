@@ -1,16 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { getDate, getDateInMs, getNowDate } from './date.utils';
 import { createCalendarDays } from './utils/calendar-days.utils';
 import { CalendarDay } from './models/calendar-day.interface';
+import { IDate } from './models/date.interface';
 
 @Component({
   selector: 'ngx-datepicker',
   templateUrl: './datepicker.component.html',
   styleUrls: ['./datepicker.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DatepickerComponent implements OnInit {
   days: CalendarDay[] = [];
-  currentViewDate = getNowDate();
+  currentViewDate: IDate = getNowDate();
   selectedDate;
   hidePrevAndNextDays = true;
   readonly today = getDateInMs(this.currentViewDate.year, this.currentViewDate.month, this.currentViewDate.day);

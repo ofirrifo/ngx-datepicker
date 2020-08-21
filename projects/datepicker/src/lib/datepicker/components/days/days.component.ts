@@ -26,24 +26,24 @@ export class DaysComponent implements OnChanges {
   constructor(private renderer: Renderer2, @Inject(DOCUMENT) private document: Document) {}
 
   ngOnChanges(changes: SimpleChanges): void {
-    setTimeout(() => {
-      Array.from(this.document.querySelectorAll('.day-value')).forEach((element: HTMLElement) => {
-        const dateInMs = parseInt(element.getAttribute('data-date-in-ms'));
-        const startSelectedDate = 1596661200000;
-        const endSelectedDate = 1597006800000;
-
-        if (dateInMs >= startSelectedDate && dateInMs <= endSelectedDate) {
-          this.renderer.addClass(element, 'range-day-marker');
-          if (dateInMs === startSelectedDate) {
-            this.renderer.addClass(element, 'range-day-marker-start');
-          } else if (dateInMs === endSelectedDate) {
-            this.renderer.addClass(element, 'range-day-marker-end');
-          } else {
-            // NOTHING
-          }
-        }
-      });
-    });
+    // setTimeout(() => {
+    //   Array.from(this.document.querySelectorAll('.day-value')).forEach((element: HTMLElement) => {
+    //     const dateInMs = parseInt(element.getAttribute('data-date-in-ms'));
+    //     const startSelectedDate = 1596661200000;
+    //     const endSelectedDate = 1597006800000;
+    //
+    //     if (dateInMs >= startSelectedDate && dateInMs <= endSelectedDate) {
+    //       this.renderer.addClass(element, 'range-day-marker');
+    //       if (dateInMs === startSelectedDate) {
+    //         this.renderer.addClass(element, 'range-day-marker-start');
+    //       } else if (dateInMs === endSelectedDate) {
+    //         this.renderer.addClass(element, 'range-day-marker-end');
+    //       } else {
+    //         // NOTHING
+    //       }
+    //     }
+    //   });
+    // });
   }
 
   trackByFn(index, day: CalendarDay): number {
