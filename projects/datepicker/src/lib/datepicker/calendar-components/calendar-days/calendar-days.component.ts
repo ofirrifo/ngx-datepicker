@@ -14,12 +14,12 @@ import { OutputEventInterface } from '../../models/output-event.interface';
 import { DOCUMENT } from '@angular/common';
 
 @Component({
-  selector: 'ngx-days',
-  templateUrl: './days.component.html',
-  styleUrls: ['./days.component.scss'],
+  selector: 'ngx-calendar-days',
+  templateUrl: './calendar-days.component.html',
+  styleUrls: ['./calendar-days.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class DaysComponent implements OnChanges {
+export class CalendarDaysComponent implements OnChanges {
   @Input() days: CalendarDay[] = [];
   @Output() selected = new EventEmitter<OutputEventInterface<CalendarDay>>();
 
