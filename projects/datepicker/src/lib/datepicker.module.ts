@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { DatepickerComponent } from './datepicker/datepicker.component';
+import { DatepickerComponent } from './datepicker/datepicker/datepicker.component';
 import { CommonModule } from '@angular/common';
 import { DaysComponent } from './datepicker/components/days/days.component';
 import { WeekDaysHeaderComponent } from './datepicker/components/week-days-header/week-days-header.component';

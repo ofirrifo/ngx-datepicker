@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { getDate, getDateInMs, getNowDate } from './date.utils';
-import { createCalendarDays } from './utils/calendar-days.utils';
-import { CalendarDay } from './models/calendar-day.interface';
-import { IDate } from './models/date.interface';
+import { getDate, getDateInMs, getNowDate } from '../date.utils';
+import { createCalendarDays } from '../utils/calendar-days.utils';
+import { CalendarDay } from '../models/calendar-day.interface';
+import { IDate } from '../models/date.interface';
 
 @Component({
   selector: 'ngx-datepicker',
