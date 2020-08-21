@@ -1,4 +1,4 @@
-import { getDateInMs, getDaysInMonth, getNowDate, getTheFirstDayOfMonth } from '../date.utils';
+import { getDateInMs, getDaysInMonth, getNowDate, getTheFirstDayOfMonth } from './date.utils';
 import { CalendarDay } from '../models/calendar-day.interface';
 
 export function createCalendarDays(year: number, month: number, hidePrevAndNextDays: boolean, selectedDate: any): CalendarDay[] {

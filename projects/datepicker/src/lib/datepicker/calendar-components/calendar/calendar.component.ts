@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { CalendarDay } from '../../models/calendar-day.interface';
 import { IDate } from '../../models/date.interface';
-import { getDate, getDateInMs, getNowDate } from '../../date.utils';
+import { getDate, getDateInMs, getNowDate } from '../../utils/date.utils';
 import { createCalendarDays } from '../../utils/calendar-days.utils';
 
 @Component({
