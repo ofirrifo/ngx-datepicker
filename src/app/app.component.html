@@ -1,1 +1,7 @@
-<ngx-datepicker></ngx-datepicker>
+<ngx-datepicker
+  (selectionChanged)="selectionChanged($event)"
+></ngx-datepicker>
+
+<div>
+  {{selectedDate}}
+</div>

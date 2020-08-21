@@ -1,4 +1,6 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Output, EventEmitter } from '@angular/core';
+import { IDate } from '../models/date.interface';
+import { OutputEventInterface } from '../models/output-event.interface';
 
 @Component({
   selector: 'ngx-datepicker',
@@ -6,4 +8,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrls: ['./datepicker.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class DatepickerComponent {}
+export class DatepickerComponent {
+  @Output() selectionChanged = new EventEmitter<OutputEventInterface<IDate>>();
+}

@@ -1,8 +1,9 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { CalendarDay } from '../../models/calendar-day.interface';
 import { IDate } from '../../models/date.interface';
 import { getDate, getDateInMs, getNowDate } from '../../utils/date.utils';
 import { createCalendarDays } from '../../utils/calendar-days.utils';
+import { OutputEventInterface } from '../../models/output-event.interface';
 
 @Component({
   selector: 'ngx-calendar',
@@ -11,6 +12,8 @@ import { createCalendarDays } from '../../utils/calendar-days.utils';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CalendarComponent implements OnInit {
+  @Output() selectionChanged = new EventEmitter<OutputEventInterface<IDate>>();
+
   days: CalendarDay[] = [];
   currentViewDate: IDate = getNowDate();
   selectedDate;
@@ -22,11 +25,13 @@ export class CalendarComponent implements OnInit {
   }
 
   updateSelected({ event, data: day }: { event: MouseEvent; data: CalendarDay }): void {
+    const selectedDate = getDate(new Date(day.dateInMs));
     this.selectedDate = {
       dateInMs: day.dateInMs,
-      ...getDate(new Date(day.dateInMs)),
+      ...selectedDate,
     };
     this.createDays(2020, this.currentViewDate.month);
+    this.selectionChanged.emit({ event, data: selectedDate });
   }
 
   prevMonth(): void {
