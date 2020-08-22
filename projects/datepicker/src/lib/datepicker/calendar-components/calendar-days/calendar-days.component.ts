@@ -23,7 +23,7 @@ export class CalendarDaysComponent implements OnChanges {
   @Input() days: CalendarDay[] = [];
   @Output() selected = new EventEmitter<OutputEventInterface<CalendarDay>>();
 
-  constructor(private renderer: Renderer2, @Inject(DOCUMENT) private document: Document) {}
+  constructor(private renderer: Renderer2) {}
 
   ngOnChanges(changes: SimpleChanges): void {
     // setTimeout(() => {
