@@ -2,9 +2,9 @@
   <ngx-calendar-header
     [currentViewDate]="currentViewDate"
 
-    (showToday)="showToday()"
-    (nextMonth)="nextMonth()"
-    (prevMonth)="prevMonth()"
+    (showToday)="showToday.emit($event)"
+    (nextMonth)="nextMonth.emit($event)"
+    (prevMonth)="prevMonth.emit($event)"
   ></ngx-calendar-header>
 
   <ngx-calendar-week-days>
@@ -13,7 +13,7 @@
   <ngx-calendar-days
     [days]="days"
 
-    (selected)="updateSelected($event)"
+    (selected)="selectionChanged.emit($event)"
   ></ngx-calendar-days>
 
   <ngx-calendar-footer>

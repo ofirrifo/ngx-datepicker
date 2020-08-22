@@ -1,5 +1,11 @@
 <ngx-calendar
-  (selectionChanged)="selectionChanged.emit($event)">
+  [days]="days"
+  [currentViewDate]="currentViewDate"
+
+  (showToday)="showToday($event)"
+  (nextMonth)="nextMonth($event)"
+  (prevMonth)="prevMonth($event)"
+  (selectionChanged)="updateSelected($event)">
 </ngx-calendar>
 
 <!--TODO - Year View-->
