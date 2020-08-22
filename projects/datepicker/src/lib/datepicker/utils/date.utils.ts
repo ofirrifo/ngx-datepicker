@@ -27,5 +27,6 @@ export function getDate(date: Date): IDate {
     year: date.getFullYear(),
     month: getMonth(date),
     day: date.getDate(),
+    date,
   };
 }
