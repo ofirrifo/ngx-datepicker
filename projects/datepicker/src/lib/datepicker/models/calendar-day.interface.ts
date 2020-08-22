@@ -1,6 +1,5 @@
 export interface CalendarDay {
   value: number;
-  dateInMs?: number;
-  isFromCurrentMonth: boolean;
-  class: string;
+  dateInMs: number;
+  class?: string;
 }

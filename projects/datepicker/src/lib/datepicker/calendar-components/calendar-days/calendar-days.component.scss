@@ -54,12 +54,6 @@ $day-value-width-an-height: $day-width-an-height - 4px;
         right: 0;
       }
 
-      &:hover:not(.prev-month-day):not(.next-mont-day):not(.selected) {
-        cursor: pointer;
-        background-color: var(--dpl-n1-color);
-        border-radius: 50%;
-      }
-
       &.selected {
         background-color: var(--dpl-b-100-color);
         color: white;
@@ -74,14 +68,6 @@ $day-value-width-an-height: $day-width-an-height - 4px;
           box-shadow: inset 0 0 0 1px var(--dpl-n0-color);
           border: 1px solid var(--dpl-b-100-color);
         }
-      }
-
-      &.prev-month-day, &.next-mont-day {
-        color: var(--dpl-n100-color);
-      }
-
-      &.hide-day {
-        color: transparent;
       }
     }
   }

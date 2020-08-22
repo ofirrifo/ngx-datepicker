@@ -1,4 +1,14 @@
-import { ChangeDetectionStrategy, Component, Output, EventEmitter, OnInit, Input } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  Output,
+  EventEmitter,
+  OnInit,
+  Input,
+  OnChanges,
+  SimpleChanges,
+  ChangeDetectorRef,
+} from '@angular/core';
 import { IDate } from '../models/date.interface';
 import { OutputEventInterface } from '../models/output-event.interface';
 import { CalendarDay } from '../models/calendar-day.interface';
@@ -11,8 +21,8 @@ import { createCalendarDays } from '../utils/calendar-days.utils';
   styleUrls: ['./datepicker.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class DatepickerComponent implements OnInit {
-  @Input() hidePrevAndNextDays = true;
+export class DatepickerComponent implements OnInit, OnChanges {
+  @Input() value: Date;
   @Output() selectionChanged = new EventEmitter<OutputEventInterface<IDate>>();
 
   days: CalendarDay[] = [];
@@ -22,13 +32,30 @@ export class DatepickerComponent implements OnInit {
   readonly today = getDateInMs(this.currentViewDate.year, this.currentViewDate.month, this.currentViewDate.day);
 
   ngOnInit(): void {
+    this.init();
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes.value) {
+      this.init();
+    }
+  }
+
+  init(): void {
+    if (this.value) {
+      const selectedDate = getDate(this.value);
+      this.selectedDate = {
+        dateInMs: this.value.getTime(),
+        ...selectedDate,
+      };
+    }
     this.createDays(this.currentViewDate.year, this.currentViewDate.month);
   }
 
-  updateSelected({ event, data: day }: { event: MouseEvent; data: CalendarDay }): void {
-    const selectedDate = getDate(new Date(day.dateInMs));
+  updateSelected({ event, data: calendarDay }: { event: MouseEvent; data: CalendarDay }): void {
+    const selectedDate = getDate(new Date(calendarDay.dateInMs));
     this.selectedDate = {
-      dateInMs: day.dateInMs,
+      dateInMs: calendarDay.dateInMs,
       ...selectedDate,
     };
     this.createDays(this.currentViewDate.year, this.currentViewDate.month);
@@ -75,13 +102,7 @@ export class DatepickerComponent implements OnInit {
     this.createDays(this.currentViewDate.year, this.currentViewDate.month);
   }
 
-  apply(): void {}
-
-  cancel(): void {}
-
   createDays(year: number, month: number): void {
-    this.days = createCalendarDays(year, month, this.hidePrevAndNextDays, this.selectedDate);
+    this.days = createCalendarDays(year, month, this.selectedDate);
   }
-
-  hover(): void {}
 }
