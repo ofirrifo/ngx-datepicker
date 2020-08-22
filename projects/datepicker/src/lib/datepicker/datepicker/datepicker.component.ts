@@ -31,7 +31,7 @@ export class DatepickerComponent implements OnInit {
       dateInMs: day.dateInMs,
       ...selectedDate,
     };
-    this.createDays(2020, this.currentViewDate.month);
+    this.createDays(this.currentViewDate.year, this.currentViewDate.month);
     this.selectionChanged.emit({ event, data: selectedDate });
   }
 
@@ -43,7 +43,7 @@ export class DatepickerComponent implements OnInit {
       this.currentViewDate.month--;
     }
 
-    this.createDays(2020, this.currentViewDate.month);
+    this.createDays(this.currentViewDate.year, this.currentViewDate.month);
   }
 
   nextMonth({ event }: { event: MouseEvent }): void {
