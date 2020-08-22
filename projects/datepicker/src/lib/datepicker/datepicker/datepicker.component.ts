@@ -53,7 +53,7 @@ export class DatepickerComponent implements OnInit {
     } else {
       this.currentViewDate.month++;
     }
-    this.createDays(2020, this.currentViewDate.month);
+    this.createDays(this.currentViewDate.year, this.currentViewDate.month);
   }
 
   showToday({ event }: { event: MouseEvent }): void {
