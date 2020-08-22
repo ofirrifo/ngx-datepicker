@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "all:build": "npm run example:build && npm run lib:build",
+    "example:build": "ng build ngx-datepicker ",
     "start": "ng serve --open",
     "lib:build": "ng build datepicker",
     "lib:lint": "ng lint datepicker --fix",
