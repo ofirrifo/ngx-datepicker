@@ -14,7 +14,7 @@ export function createCalendarDays(year: number, month: number, selectedDate: an
   }
   for (let i = 1; i < daysInMonth + 1; i++) {
     const dateInMs = getDateInMs(year, month, i);
-    const selectedDateInMs = getDateInMs(selectedDate.year, selectedDate.month, selectedDate.day);
+    const selectedDateInMs = selectedDate ? getDateInMs(selectedDate.year, selectedDate.month, selectedDate.day) : void 0;
     const nowDate = getNowDate();
     const today = getDateInMs(nowDate.year, nowDate.month, nowDate.day);
     let classStyle = dateInMs === today ? 'today' : '';
