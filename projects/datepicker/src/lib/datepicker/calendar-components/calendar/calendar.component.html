@@ -1,21 +1,19 @@
-<div>
-  <ngx-calendar-header
-    [currentViewDate]="currentViewDate"
+<ngx-calendar-header
+  [currentViewDate]="currentViewDate"
 
-    (showToday)="showToday.emit($event)"
-    (nextMonth)="nextMonth.emit($event)"
-    (prevMonth)="prevMonth.emit($event)"
-  ></ngx-calendar-header>
+  (showToday)="showToday.emit($event)"
+  (nextMonth)="nextMonth.emit($event)"
+  (prevMonth)="prevMonth.emit($event)"
+></ngx-calendar-header>
 
-  <ngx-calendar-week-days>
-  </ngx-calendar-week-days>
+<ngx-calendar-week-days>
+</ngx-calendar-week-days>
 
-  <ngx-calendar-days
-    [days]="days"
+<ngx-calendar-days
+  [days]="days"
 
-    (selected)="selectionChanged.emit($event)"
-  ></ngx-calendar-days>
+  (selected)="selectionChanged.emit($event)"
+></ngx-calendar-days>
 
-  <ngx-calendar-footer>
-  </ngx-calendar-footer>
-</div>
+<ngx-calendar-footer>
+</ngx-calendar-footer>

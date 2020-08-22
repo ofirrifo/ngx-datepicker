@@ -3,7 +3,7 @@ $day-value-width-an-height: $day-width-an-height - 4px;
 
 :host {
   display: grid;
-  width: 280px;
+  width: 100%;
   padding: 10px;
 
   grid-template-columns: repeat(7, 1fr);

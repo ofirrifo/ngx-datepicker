@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'ngx-datepicker';
   selectedDate: string;
   date: Date;
-  dateValue = new Date();
+  dateValue = (new Date()).setMonth((new Date('')).getMonth() + 1);
 
   selectionChanged({ data: date }: { data: IDate }): void {
     this.selectedDate = `${date.day}/${date.month}/${date.year}`;

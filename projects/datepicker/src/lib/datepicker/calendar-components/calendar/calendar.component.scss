@@ -1,5 +1,6 @@
 :host {
   display: flex;
+  flex-direction: column;
   box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 var(--dpl-n14-color), 0 1px 10px 0 var(--dpl-n10-color);
   width: 300px;
   border-radius: 4px;
@@ -10,21 +11,5 @@
     box-sizing: border-box;
   }
 
-  .link-btn {
-    all: unset;
-    color: var(--dpl-n90-color);
-    font-size: 14px;
-    font-weight: 500;
-    height: 30px;
-    padding: 0 10px;
 
-    &[disabled] {
-      opacity: 0.2;
-    }
-
-    &:hover {
-      cursor: pointer;
-      background-color: var(--dpl-n1-color);
-    }
-  }
 }
