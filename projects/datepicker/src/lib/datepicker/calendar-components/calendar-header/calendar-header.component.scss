@@ -1,6 +1,7 @@
 :host {
   display: block;
   width: 100%;
+
   * {
     box-sizing: border-box;
   }
@@ -17,11 +18,37 @@
       height: 100%;
       align-items: center;
       justify-content: center;
+      position: relative;
+      color: var(--dpl-n50-color);
+      border-radius: 50%;
+      background-color: transparent;
+      transition: background-color 200ms cubic-bezier(0.35, 0, 0.25, 1);
+
+      &::after {
+        content: "";
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        margin: 15.5px;
+        border: 0 solid currentColor;
+        border-top-width: 2px;
+      }
+
+      &.prev::after {
+        transform: translateX(2px) rotate(-45deg);
+        border-left-width: 2px;
+      }
+
+      &.next::after {
+        border-right-width: 2px;
+        transform: translateX(-2px) rotate(45deg);
+      }
 
       &:hover {
         background-color: var(--dpl-n1-color);
         cursor: pointer;
-        border-radius: 50%;
       }
     }
 
