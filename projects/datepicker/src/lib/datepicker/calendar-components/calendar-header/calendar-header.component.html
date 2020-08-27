@@ -1,5 +1,5 @@
 <div class="header">
-  <button class="link-btn" (click)="showToday.emit({event: $event, data: undefined})">Today</button>
+  <button class="transparent-btn" (click)="showToday.emit({event: $event, data: undefined})">Today</button>
 
   <div class="month">{{currentViewDate?.year}} / {{currentViewDate?.month}}</div>
   <div class="month-btn prev" (click)="prevMonth.emit({event: $event, data: undefined})"></div>
