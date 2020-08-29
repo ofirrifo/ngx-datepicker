@@ -1,12 +1,20 @@
-<ngx-calendar
-  [days]="days"
-  [currentViewDate]="currentViewDate"
+<ng-container [ngSwitch]="currentView">
+  <ngx-calendar
+    *ngSwitchCase="'calendar'"
+    [days]="days"
+    [currentViewDate]="currentViewDate"
 
-  (showToday)="showToday($event)"
-  (nextMonth)="nextMonth($event)"
-  (prevMonth)="prevMonth($event)"
-  (selectionChanged)="updateSelected($event)">
-</ngx-calendar>
+    (showToday)="showToday($event)"
+    (nextMonth)="nextMonth($event)"
+    (prevMonth)="prevMonth($event)"
+    (selectionChanged)="updateSelected($event)">
+  </ngx-calendar>
 
-<!--TODO - Year View-->
-<!--TODO - Month View-->
+  <!--TODO - Year View-->
+  <ngx-years-view
+    *ngSwitchCase="'years'"
+  ></ngx-years-view>
+
+
+  <!--TODO - Month View-->
+</ng-container>

@@ -30,6 +30,7 @@ export class DatepickerComponent implements OnInit, OnChanges {
   selectedDate;
 
   readonly today = getDateInMs(this.currentViewDate.year, this.currentViewDate.month, this.currentViewDate.day);
+  currentView = 'calendar';
 
   ngOnInit(): void {
     this.init();

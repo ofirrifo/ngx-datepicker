@@ -1,2 +1,16 @@
 @use '../../common/styles/color-palette';
 
+:host {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 var(--dpl-n14-color), 0 1px 10px 0 var(--dpl-n10-color);
+  width: 300px;
+  border-radius: 4px;
+
+  * {
+    user-select: none;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    box-sizing: border-box;
+  }
+
+}
