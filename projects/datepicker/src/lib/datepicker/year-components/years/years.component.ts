@@ -1,9 +1,10 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'ngx-years',
   templateUrl: './years.component.html',
   styleUrls: ['./years.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class YearsComponent implements OnInit {
   @Input() readonly yearToShow: number;
