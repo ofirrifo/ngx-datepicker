@@ -1,4 +1,6 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
+import { IDate } from '../../models/date.interface';
+import { OutputEventInterface } from '../../models/output-event.interface';
 
 @Component({
   selector: 'ngx-years-header',
@@ -6,8 +8,9 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
   styleUrls: ['./years-header.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class YearsHeaderComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit(): void {}
+export class YearsHeaderComponent {
+  @Input() currentViewDate: IDate;
+  @Output() prevClicked = new EventEmitter<OutputEventInterface<void>>();
+  @Output() nextClicked = new EventEmitter<OutputEventInterface<void>>();
+  @Output() changeViewClicked = new EventEmitter<OutputEventInterface<void>>();
 }

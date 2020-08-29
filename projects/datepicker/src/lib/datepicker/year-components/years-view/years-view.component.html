@@ -1,2 +1,7 @@
-<ngx-years-header></ngx-years-header>
-<ngx-years [yearToShow]="yearToShow"></ngx-years>
+<ngx-years-header
+  [currentViewDate]="currentViewDate"
+></ngx-years-header>
+
+<ngx-years
+  [yearToShow]="currentViewDate.year"
+></ngx-years>

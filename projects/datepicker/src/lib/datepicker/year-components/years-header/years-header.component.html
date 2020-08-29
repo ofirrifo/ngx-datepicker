@@ -1,3 +1,12 @@
 <div class="header">
+  <button
+    class="transparent-btn"
+    (click)="changeViewClicked.emit({event: $event, data: undefined})">
+    {{currentViewDate?.year}} / {{currentViewDate?.month}}
+  </button>
 
+  <div class="next-prev-container">
+    <div class="btn prev" (click)="prevClicked.emit({event: $event, data: undefined})"></div>
+    <div class="btn next" (click)="nextClicked.emit({event: $event, data: undefined})"></div>
+  </div>
 </div>

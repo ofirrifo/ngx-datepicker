@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { IDate } from '../../models/date.interface';
 
 @Component({
   selector: 'ngx-years-view',
@@ -7,5 +8,5 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class YearsViewComponent {
-  @Input() readonly yearToShow: number;
+  @Input() readonly currentViewDate: IDate;
 }
