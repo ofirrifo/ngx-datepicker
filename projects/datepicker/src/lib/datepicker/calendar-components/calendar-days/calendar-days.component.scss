@@ -1,5 +1,5 @@
-$day-width-an-height: 40px;
-$day-value-width-an-height: $day-width-an-height - 4px;
+$cell-width-and-height: 40px;
+$cell-value-width-and-height: $cell-width-and-height - 4px;
 
 :host {
   display: grid;
@@ -17,15 +17,15 @@ $day-value-width-an-height: $day-width-an-height - 4px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: $day-width-an-height;
-    height: $day-width-an-height;
+    width: $cell-width-and-height;
+    height: $cell-width-and-height;
 
     .day-value {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: $day-value-width-an-height;
-      height: $day-value-width-an-height;
+      width: $cell-value-width-and-height;
+      height: $cell-value-width-and-height;
       color: var(--dpl-n100-color);
       font-size: 13px;
       position: relative;
@@ -37,22 +37,22 @@ $day-value-width-an-height: $day-width-an-height - 4px;
         border-top: 1px dashed var(--dpl-n24-color);
         border-bottom: 1px dashed  var(--dpl-n24-color);
         //background: rgba(63, 81, 181, .2);
-        width: $day-width-an-height;
-        height: $day-value-width-an-height;
+        width: $cell-width-and-height;
+        height: $cell-value-width-and-height;
         position: absolute;
       }
 
       &.range-day-marker-start::before {
         border-top-left-radius: 50%;
         border-bottom-left-radius: 50%;
-        width: $day-width-an-height - 2px;
+        width: $cell-width-and-height - 2px;
         left: 0;
       }
 
       &.range-day-marker-end::before {
         border-top-right-radius: 50%;
         border-bottom-right-radius: 50%;
-        width: $day-width-an-height - 2px;
+        width: $cell-width-and-height - 2px;
         right: 0;
       }
 

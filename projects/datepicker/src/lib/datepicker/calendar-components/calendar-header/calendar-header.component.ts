@@ -13,4 +13,5 @@ export class CalendarHeaderComponent {
   @Output() showToday = new EventEmitter<OutputEventInterface<void>>();
   @Output() prevMonth = new EventEmitter<OutputEventInterface<void>>();
   @Output() nextMonth = new EventEmitter<OutputEventInterface<void>>();
+  @Output() showYearsView = new EventEmitter<OutputEventInterface<void>>();
 }

@@ -1,7 +1,16 @@
 <div class="header">
-  <button class="transparent-btn" (click)="showToday.emit({event: $event, data: undefined})">Today</button>
+<!--  <button -->
+<!--    class="transparent-btn"-->
+<!--    (click)="showToday.emit({event: $event, data: undefined})">-->
+<!--    Today-->
+<!--  </button>-->
 
-  <div class="month">{{currentViewDate?.year}} / {{currentViewDate?.month}}</div>
+  <button
+    class="transparent-btn"
+    (click)="showYearsView.emit({event: $event, data: undefined})">
+    {{currentViewDate?.year}} / {{currentViewDate?.month}}
+  </button>
+
   <div class="month-btn prev" (click)="prevMonth.emit({event: $event, data: undefined})"></div>
   <div class="month-btn next" (click)="nextMonth.emit({event: $event, data: undefined})"></div>
 </div>

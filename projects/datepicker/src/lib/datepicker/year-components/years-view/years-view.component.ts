@@ -8,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
 export class YearsViewComponent implements OnInit {
   years = [];
 
-  constructor() {}
-
   ngOnInit(): void {
-    for (let i = 2016; i < 2040; i++) {
+    const numOfYearsPerPage = 24;
+    const yearToShow = 1993;
+    const a = Math.floor(yearToShow / numOfYearsPerPage);
+    const b = a * numOfYearsPerPage;
+    const c = yearToShow - b;
+    const startYear = yearToShow - c;
+    const endYear = startYear + numOfYearsPerPage;
+
+    for (let i = startYear; i < endYear; i++) {
       this.years.push(i);
     }
   }

@@ -1,14 +1,4 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  Output,
-  EventEmitter,
-  OnInit,
-  Input,
-  OnChanges,
-  SimpleChanges,
-  ChangeDetectorRef,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { IDate } from '../models/date.interface';
 import { OutputEventInterface } from '../models/output-event.interface';
 import { CalendarDay } from '../models/calendar-day.interface';
@@ -30,7 +20,7 @@ export class DatepickerComponent implements OnInit, OnChanges {
   selectedDate;
 
   readonly today = getDateInMs(this.currentViewDate.year, this.currentViewDate.month, this.currentViewDate.day);
-  currentView = 'calendar';
+  currentView: 'calendar' | 'years' | 'month' = 'calendar';
 
   ngOnInit(): void {
     this.init();
@@ -105,5 +95,9 @@ export class DatepickerComponent implements OnInit, OnChanges {
 
   createDays(year: number, month: number): void {
     this.days = createCalendarDays(year, month, this.selectedDate);
+  }
+
+  showYearsView(): void {
+    this.currentView = 'years';
   }
 }
