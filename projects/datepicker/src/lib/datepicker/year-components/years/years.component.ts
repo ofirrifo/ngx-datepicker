@@ -11,8 +11,7 @@ export class YearsComponent implements OnInit {
   years = [];
   ngOnInit(): void {
     const numOfYearsPerPage = 24;
-    const a = Math.floor(this.yearToShow / numOfYearsPerPage);
-    const b = a * numOfYearsPerPage;
+    const b = Math.floor(this.yearToShow / numOfYearsPerPage) * numOfYearsPerPage;
     const yearToShowIndexPlace = this.yearToShow - b;
     const firstYearInView = this.yearToShow - yearToShowIndexPlace;
     const lastYearInView = firstYearInView + numOfYearsPerPage;
