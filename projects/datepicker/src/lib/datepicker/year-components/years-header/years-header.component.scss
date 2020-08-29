@@ -1,0 +1,17 @@
+@use "../../../common/styles/class";
+
+:host {
+  display: block;
+  width: 100%;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding: 10px;
+  }
+}

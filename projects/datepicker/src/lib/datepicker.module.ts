@@ -7,6 +7,8 @@ import { CalendarFooterComponent } from './datepicker/calendar-components/calend
 import { CalendarComponent } from './datepicker/calendar-components/calendar/calendar.component';
 import { CalendarWeekDaysComponent } from './datepicker/calendar-components/calendar-week-days/calendar-week-days.component';
 import { YearsViewComponent } from './datepicker/year-components/years-view/years-view.component';
+import { YearsHeaderComponent } from './datepicker/year-components/years-header/years-header.component';
+import { YearsComponent } from './datepicker/year-components/years/years.component';
 
 @NgModule({
   imports: [CommonModule],
@@ -18,6 +20,8 @@ import { YearsViewComponent } from './datepicker/year-components/years-view/year
     CalendarComponent,
     CalendarWeekDaysComponent,
     YearsViewComponent,
+    YearsHeaderComponent,
+    YearsComponent,
   ],
   exports: [DatepickerComponent],
 })
